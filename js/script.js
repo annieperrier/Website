@@ -1,7 +1,8 @@
 $(function() {
 
 	// fix scrollspy for using a fixed navbar
-	var scrolloffset = 55;
+	// not needed anymore when using negative margin for sections
+	var scrolloffset = 0;
 
 	// configure scrollspy
 	$('body').scrollspy({ target: '.navbar', offset: scrolloffset });
@@ -31,31 +32,4 @@ $(function() {
 			$("#navbar").collapse('hide');
 		}
 	});
-
-	init_map();
-
-	biocoretek_img();
 });
-
-
-function init_map()
-{
-	var mapCanvas = document.getElementById('map-canvas');
-	var mapOptions = {
-		center: new google.maps.LatLng(43.6091722,-79.6754894),
-		zoom: 9,
-		mapTypeId: google.maps.MapTypeId.ROADMAP
-	}
-	var map = new google.maps.Map(mapCanvas, mapOptions);
-}
-
-function biocoretek_img()
-{
-	$("#biocoretek img")
-	.on("mouseover", function(e) {
-		$(this).attr("src", "img/biocoretek2.png");
-	})
-	.on("mouseout", function(e) {
-		$(this).attr("src", "img/biocoretek1.png");
-	});
-}

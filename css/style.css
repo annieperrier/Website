@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Cabin|Roboto+Condensed);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed|Secular+One);
 
 body
 {
@@ -6,22 +6,20 @@ body
 	position: relative;
 	padding-bottom: 0px;
 	font-family: 'Roboto Condensed', sans-serif;
-	font-family: 'Cabin', sans-serif;
+	background-color: #f1f0e9;
 }
-
 .navbar
 {
-	margin-top: 0px;
-	margin-bottom: 0px;
-	border-color: #26596a;
-	border-bottom-width:  5px;
-	font-family: 'Roboto Condensed', sans-serif;
+	background-color: #022835 !important;
+	border-bottom: 5px solid #26596a;
 }
-
-.navbar-nav>li.nav-icon>a
+.navbar .navbar-brand
 {
-	padding: 5px 4px 0px 4px;
-	margin: 0px;
+	font-family: 'Secular One', sans-serif;
+}
+.navbar .svg-inline--fa
+{
+	margin-left: 12px;
 }
 
 footer
@@ -34,9 +32,9 @@ hr
 	border: 0px;
 	height: 1px;
 	background: #ffffff;
-	background: -moz-linear-gradient(left, #ffffff 0%, #887F42 50%, #ffffff 100%);
-	background: -webkit-linear-gradient(left, #ffffff 0%, #887F42 50%, #ffffff 100%);
-	background: linear-gradient(to right, #ffffff 0%, #887F42 50%, #ffffff 100%);
+	background: -moz-linear-gradient(left, #ffffff 0%, #8e8b6f 50%, #ffffff 100%);
+	background: -webkit-linear-gradient(left, #ffffff 0%, #8e8b6f 50%, #ffffff 100%);
+	background: linear-gradient(to right, #ffffff 0%, #8e8b6f 50%, #ffffff 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 );
 }
 
@@ -56,51 +54,116 @@ a:hover, a:active, a:focus
 	border-radius: 0px;
 	border: 0px;
 	font-size: 16px;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 .btn-default
 {
-	font-family: 'Roboto Condensed', sans-serif;
-	color: #fff;
-	background-color: #022835;
+	color: #104050;
+	background-color: #d6d3c3;
 }
 .btn-default:hover, .btn-default:active, .btn-default:focus
 {
+	color: #26596A;
+	background-color: #e6e3d3;
+}
+.btn-default.disabled
+{
+	color: #aaa;
+	background-color: #e6e3d3;
+}
+.btn-primary
+{
 	color: #fff;
 	background-color: #104050;
 }
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus
+{
+	color: #fff;
+	background-color: #26596A;
+}
+.btn-primary.disabled
+{
+	color: #ccc;
+	background-color: #26596A;
+}
 
-/* //////////////////////////////////// PANELS ///////////////////////////// */
+/* ////////////////////////////////////// CARD ///////////////////////////// */
 
-.panel-default
+.card-default
 {
 	border-radius: 0px;
 	border: 0px;
-	background-color: #457585;
+	background-color: #fff;
+	margin-bottom: 30px;
 }
-.panel-default .panel-heading
+.card-default .card-header
 {
 	border: 0px;
-	background-color: #104050;
+	border-radius: 0px;
+	background-color: #457585;
 	color: #fff;
+	font-family: 'Secular One', sans-serif;
+	font-size: 1.1rem;
 }
-.panel-default .panel-heading h3
+.card-default .card-img
 {
-	font-size: 20px;
-	font-family: 'Roboto Condensed', sans-serif;
+	border-radius: 0;
 }
-.panel-default h4
+.card-default .imgcontainer
+{
+	padding: 1.25rem 1.25rem 0 1.25rem;
+	border: 1px solid #d6d3c3;
+	border-top: none;
+	border-bottom: none;
+}
+.card-default .card-title
 {
 	color: #fff;
+	color: #022835;
 	border-bottom: 2px solid #26596A;
 	font-family: 'Roboto Condensed', sans-serif;
-}
-.panel-default p
-{
+	font-size: 1.1rem;
 	margin-top: 10px;
-	margin-bottom: 10px;
-	color: #F4F8FA;
+}
+.card-default .card-body
+{
+	border: 1px solid #d6d3c3;
+	border-top: none;
+}
+.card-default p
+{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	color: #104050;
+}
+.card-default .btn .svg-inline--fa
+{
+	margin-left: 5px;
+}
+.card-default .card-footer
+{
+	border-radius: 0;
+	border: 1px solid #d6d3c3;
+	border-top: none;
+}
+.card-default .card-footer .badge
+{
+	border: 1px #bbb dotted;
+	background: #e3e3e3;
+	color: #022835;
+	border-radius: 0;
+	font-size: 80%;
 }
 
+.card-default .btn.float-right
+{
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.card-default:hover
+{
+	box-shadow: 0px 0px 8px #ccc;
+}
 
 /* //////////////////////////////////// COLORS ///////////////////////////// */
 
@@ -111,6 +174,9 @@ a:hover, a:active, a:focus
 .background-color-primary-2 { background-color: #26596A; }
 .background-color-primary-3 { background-color: #457585; }
 .background-color-primary-4 { background-color: #6C939F; }
+.background-color-primary-5 { background-color: #9CC3CF; }
+.background-color-primary-6 { background-color: #BCE3EF; }
+.background-color-primary-7 { background-color: #e0e7ea; }
 
 .background-gradient-primary-diagonal-full
 {
@@ -125,54 +191,67 @@ a:hover, a:active, a:focus
 }
 
 /* sand */
-.background-color-secondary-0 { background-color: #887F42; }
-.background-color-secondary-1 { background-color: #ABA15C; }
-.background-color-secondary-2 { background-color: #C7BE7D; }
-.background-color-secondary-3 { background-color: #E8E0A9; }
-.background-color-secondary-4 { background-color: #FFF9D3; }
+.background-color-secondary-0 { background-color: #8e8b6f; }
+.background-color-secondary-1 { background-color: #a9a386; }
+.background-color-secondary-2 { background-color: #cac5a8; }
+.background-color-secondary-3 { background-color: #d6d3c3; }
+.background-color-secondary-4 { background-color: #f1f0e9; }
+
 
 .background-color-secondary-2 a
 {
-	color: #887F42;
+	color: #8e8b6f;
 }
 .background-color-secondary-2 a:hover, .background-color-secondary-2 a:active, .background-color-secondary-2 a:focus
 {
-	color: #ABA15C;
+	color: #a9a386;
 }
 
 /* //////////////////////////////////// CONTENT //////////////////////////// */
 
 .content
 {
-	margin-top: 55px;
 }
 .content-block
 {
-	padding-top: 10px;
-	margin-bottom: 30px;
+	padding-top: 71px;
+	margin-bottom: -41px;
+}
+.content-block h2
+{
+	font-family: 'Secular One', sans-serif;
 }
 
+/* ///////////////////////////////////// HOME ////////////////////////////// */
+
+#home
+{
+	/* do not leave space above the home jumbotron */
+	padding-top: 61px;
+}
 .jumbotron
 {
-	padding: 30px 0px;
 	color: #fff;
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 }
 .jumbotron h1
 {
-	font-family: 'Roboto Condensed', sans-serif;
-}
-@media screen and (max-width: 767px)
-{
-	.jumbotron h1
-	{
-		font-size: 50px;
-	}
+	font-family: 'Secular One', sans-serif;
 }
 .jumbotron .tagline
 {
 	font-family: 'Roboto Condensed', sans-serif;
 	color: #D2D6D8;
+	text-transform: uppercase;
+}
+
+/* //////////////////////////////////// ABOUT ////////////////////////////// */
+
+#about .container
+{
+	background-image: url('../img/blobup.svg');
+	background-repeat: no-repeat;
+	background-position: right bottom;
 }
 
 #about .container
@@ -181,22 +260,59 @@ a:hover, a:active, a:focus
 	padding-bottom: 20px;
 }
 
+/* ////////////////////////////////// CONTACT ////////////////////////////// */
+
 #contact
 {
 	color: #fff;
 	margin-bottom: 0px;
 }
-#contact>div
+@media (min-width: 768px)
 {
-	padding: 10px 0px;
+	#contact > div
+	{
+		background-image: url('../img/blobdown.svg');
+		background-repeat: no-repeat;
+		background-position: 30% top;
+	}
 }
-#contact #map-canvas
+#contact a
 {
-	width: 100%;
-	height: 250px;
+	text-decoration: none;
+}
+#contact .container
+{
+	padding-top: 10px;
 }
 #contact li
 {
 	display: inline;
 }
+#contact #back-to-top .svg-inline--fa
+{
+	margin-right: 5px;
+}
+#contact #icons .svg-inline--fa
+{
+	margin-left: 10px;
+}
 
+/* ////////////////////////////////// CAROUSEL ///////////////////////////// */
+
+.carousel-inner
+{
+	cursor: pointer;
+}
+.carousel-indicators
+{
+	bottom: -25px;
+}
+.carousel-indicators li
+{
+	background-color: #666;
+	cursor: pointer;
+}
+.carousel-indicators li.active
+{
+	background-color: #aaa;
+}
